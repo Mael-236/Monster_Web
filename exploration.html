@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsters Web - RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar" style="display: block;">
+        <a href="index.html" onclick="resetGame()">🏠 Accueil</a>
+        <a onclick="navigateTo('exploration')">🗺️ Explorer</a>
+        <a onclick="navigateTo('team')">👥 Équipe</a>
+        <a onclick="navigateTo('inventory')">🎒 Inventaire</a>
+    </nav>
+    <div id="exploration-page" class="page">
+        <h2>🗺️ Exploration</h2>
+        <div class="player-info" id="player-info">
+            <!-- Player info will be displayed here -->
+        </div>
+
+        <div class="zones" id="zones">
+            <!-- Zones will be generated here -->
+        </div>
+
+        <div class="town-actions">
+            <h3>🏘️ Ville</h3>
+            <button onclick="healTeam()">❤️ Soigner l'équipe (100💰)</button>
+            <div class="shop">
+                <h4>🏪 Boutique</h4>
+                <button onclick="buyItem('potion')">Potion - 50💰</button>
+                <button onclick="buyItem('superPotion')">Super Potion - 100💰</button>
+                <button onclick="buyItem('monsterBall')">Monster Ball - 200💰</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

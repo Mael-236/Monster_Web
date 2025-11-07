@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsters Web - RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar" style="display: block;">
+        <a onclick="resetGame()">🏠 Accueil</a>
+        <a href="exploration.html" onclick="navigateTo('exploration')">🗺️ Explorer</a>
+        <a onclick="navigateTo('team')">👥 Équipe</a>
+        <a onclick="navigateTo('inventory')">🎒 Inventaire</a>
+    </nav>
+    <div class="Nom">
+        <h2>Saisir un nom</h2>
+    </div>
+    <div class="starter-selection">
+        <h2>Choisis ton premier monstre</h2>
+        <p>1 : Charbouk     2 : Aquabri     3 : Brambou</p>
+        <input type="text" id="player-name" class="name-input" placeholder="Choix monstre">
+        <div class="starters" id="starters">
+            <!-- Starter monsters will be generated here -->
+        </div>
+    </div>
+    <div class="footer-links">
+        <a href="#privacy">Politique de confidentialité</a>
+        <a href="#feedback">Donner votre avis</a>
+    </div>

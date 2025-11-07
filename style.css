@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+#navbar a {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#navbar a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.page {
+    display: block;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.starter-selection {
+    margin: 5rem;
+}
+
+#home-page {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.title-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.title-section p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.name-input {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    margin: 2rem 0;
+    width: 300px;
+    text-align: center;
+}
+
+.starters {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.starter-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+    min-width: 180px;
+}
+
+.starter-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.monster-sprite-large {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.monster-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.monster-card.enemy {
+    background: rgba(255, 100, 100, 0.2);
+}
+
+.monster-sprite {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.monster-type {
+    color: #ffd700;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+#exploration-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.player-info {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
+.zones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.zone-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.zone-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.town-actions {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.town-actions button, .shop button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: all 0.3s;
+}
+
+.town-actions button:hover, .shop button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.shop {
+    margin-top: 1.5rem;
+}
+
+#battle-page {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#battle-page 
+
+.battle-arena {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.enemy-section, .player-section {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.monster-display {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    margin: 1rem 0;
+}
+
+.hp-bar {
+    width: 100%;
+    height: 25px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.hp-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b6b, #ff4757);
+    transition: width 0.5s;
+}
+
+.hp-fill.player {
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+}
+
+.battle-message {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+    min-width: 300px;
+}
+
+.battle-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.battle-actions button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 1.2rem 2rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.battle-actions button:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.battle-actions button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.team-grid, .inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-monster {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.exp-bar {
+    width: 100%;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.exp-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    transition: width 0.5s;
+}
+
+.inventory-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.item-desc {
+    margin-top: 0.5rem;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.message-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    z-index: 1000;
+}
+
+.footer-links {
+    margin-top: 3rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .title-section h1 {
+        font-size: 2.5rem;
+    }
+
+    #navbar {
+        flex-direction: column;
+    }
+
+    .battle-arena {
+        flex-direction: column;
+    }
+}
