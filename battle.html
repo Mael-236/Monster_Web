@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsters Web - RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar" style="display: block;">
+        <a onclick="resetGame()">Accueil</a>
+        <div id="connecte">
+        <a href="exploration.html">Explorer</a>
+        <a onclick="navigateTo('team')">Équipe</a>
+        <a onclick="navigateTo('inventory')">Inventaire</a>
+        </div>
+    </nav>
+    <!-- Battle Page -->
+    <div id="battle-page" class="page">
+        <div class="battle-arena">
+            <div class="enemy-section">
+                <h3>Monstre Sauvage</h3>
+                <div id="enemy-monster" class="monster-display"></div>
+                <div class="hp-bar">
+                    <div class="hp-fill" id="enemy-hp"></div>
+                </div>
+                <p id="enemy-hp-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="battle-message" class="battle-message" style="display: none;"></div>
+
+        <div class="battle-actions">
+            <button onclick="attack()">⚔️ Attaquer</button>
+            <button onclick="useItem('potion')" id="btn-potion">🧪 Potion (0)</button>
+            <button onclick="useItem('monsterBall')" id="btn-capture">⚾ Capturer (0)</button>
+            <button onclick="flee()">🏃 Fuir</button>
+        </div>
+    </div>
+
+    <div class="footer-links">
+        <a id="feedback" href="#feedback">Donner votre avis</a>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

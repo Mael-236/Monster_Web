@@ -16,23 +16,14 @@
         <a onclick="navigateTo('inventory')">Inventaire</a>
         </div>
     </nav>
-
-    <!-- Home Page -->
-    <div id="home-page" class="page">
-        <div class="title-section">
-            <h1>Monsters Web</h1>
-            <p>Attrape-les tous dans cette aventure RPG !</p>
-            <a href="depart.html">Démarrer la partie !</a>
+    <div class="player-section">
+        <h3>Ton Monstre</h3>
+        <div id="player-monster" class="monster-display"></div>
+        <div class="hp-bar">
+            <div class="hp-fill player" id="player-hp"></div>
         </div>
+        <p id="player-hp-text"></p>
     </div>
-
-    <div class="footer-links">
-        <a id="feedback" href="#feedback">Donner votre avis</a>
-    </div>
-
-    <!-- Message Popup -->
-    <div id="message-popup" class="message-popup" style="display: none;"></div>
-
     <script src="game.js"></script>
 </body>
 </html>

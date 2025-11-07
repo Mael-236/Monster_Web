@@ -7,7 +7,7 @@
 body {
     min-height: 100vh;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,'Press Start 2P';
     color: #fff;
 }
 
@@ -44,7 +44,8 @@ body {
 }
 
 .starter-selection {
-    margin: 5rem;
+    width: 180px;
+    
 }
 
 #home-page {
@@ -338,9 +339,9 @@ body {
 }
 
 .footer-links {
-    margin-top: 3rem;
-    display: flex;
-    gap: 2rem;
+    position: relative;
+    background: linear-gradient(80deg, #000 0%, #fff 40%);
+
 }
 
 .footer-links a {
