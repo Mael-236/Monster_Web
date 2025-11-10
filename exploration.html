@@ -8,15 +8,15 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav id="navbar" style="display: block;">
-        <a href="index.html" onclick="resetGame()">🏠 Accueil</a>
-        <a onclick="navigateTo('exploration')">🗺️ Explorer</a>
-        <a onclick="navigateTo('team')">👥 Équipe</a>
-        <a onclick="navigateTo('inventory')">🎒 Inventaire</a>
+    <nav id="navbar">
+        <a href="index.html" onclick="resetGame()"> Accueil</a>
+        <a onclick="navigateTo('team')"> Équipe</a>
+        <a onclick="navigateTo('inventory')"> Inventaire</a>
     </nav>
     <div id="exploration-page" class="page">
-        <h2>🗺️ Exploration</h2>
+        <h2>Exploration</h2>
         <div class="player-info" id="player-info">
+            <p>(pseudo)...     Argent : ...</p>
             <!-- Player info will be displayed here -->
         </div>
 
@@ -25,13 +25,13 @@
         </div>
 
         <div class="town-actions">
-            <h3>🏘️ Ville</h3>
-            <button onclick="healTeam()">❤️ Soigner l'équipe (100💰)</button>
+            <h3>Ville</h3>
+            <button onclick="healTeam()">Soigner l'équipe (100€)</button>
             <div class="shop">
-                <h4>🏪 Boutique</h4>
-                <button onclick="buyItem('potion')">Potion - 50💰</button>
-                <button onclick="buyItem('superPotion')">Super Potion - 100💰</button>
-                <button onclick="buyItem('monsterBall')">Monster Ball - 200💰</button>
+                <h4>Boutique</h4>
+                <button onclick="buyItem('potion')">Potion - 50€</button>
+                <button onclick="buyItem('superPotion')">Super Potion - 100€</button>
+                <button onclick="buyItem('monsterBall')">Monster Ball - 200€</button>
             </div>
         </div>
     </div>

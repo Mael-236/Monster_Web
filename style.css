@@ -12,7 +12,7 @@ body {
 }
 
 #navbar {
-    display: flex;
+    display: block;
     justify-content: space-around;
     background: rgba(0, 0, 0, 0.3);
     padding: 1rem;
@@ -339,15 +339,16 @@ body {
 }
 
 .footer-links {
-    position: relative;
-    background: linear-gradient(80deg, #000 0%, #fff 40%);
-
+    position:absolute;
+    margin-bottom: -20vh;
 }
 
 .footer-links a {
     color: white;
     opacity: 0.8;
     text-decoration: none;
+    background: linear-gradient(120deg, #fff 0%, #000 25%);
+    border-radius: 6px;
 }
 
 .footer-links a:hover {
